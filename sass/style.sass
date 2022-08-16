@@ -2,119 +2,110 @@
 @use 'variables'
 
 .container
-    position: relative
-    max-width: 340px
-    background: variables.$white
-    padding: 3rem 1.5rem
-    margin-top: 6rem
-    border-radius: 1.5rem
-    box-shadow: 0px 30px 35px hsl(0%, 0%, 0%, .3)
-
-.box
-    display: block
-    position: absolute
-
-h1
-    position: relative
-    text-transform: uppercase
-    text-align: center
-    font-weight: 700
-    font-size: 1.9rem
-    margin-top: 5.5rem
-    margin-bottom: 1rem
-
-.image
-    display: flex
-    align-items: center
-    justify-content: center
-
-.principal-img
-    width: 75%
-    position: absolute
-    bottom: 85%
-    left: 13%
-    z-index: 1
-
-.bg-pattern
-    width: 75%
-    position: absolute
-    bottom: 78.4%
-    left: 12%
-
-.content
-    padding: 1rem 0
-    border-bottom: 1px solid variables.$light-grayish-blue
-
-    button
-        width: 100%
-        display: flex
-        align-items: center
-        justify-content: space-between
-        gap: 1rem
-        border: none
-        background: transparent
-        color: variables.$dark-grayish-blue
-        cursor: pointer
-
-        &:hover
-            color: variables.$soft-red
-            transition: all .3s ease
-    .arrow
-        margin-left: 1rem
+    display: grid
+    grid-template-columns: 25rem 1fr
+    gap: 3rem
+    width: 57.5rem
+    padding-bottom: 5rem
+    padding-top: .5rem
+    margin-top: 7rem 
+    border-radius: 1.7rem
+    background-color: variables.$white
+    background-image: url('../images/bg-pattern-desktop.svg')
+    background-repeat: no-repeat
+    background-position: 1260% 65%
+    box-shadow: 0 50px 25px -20px hsl(0, 0%, 0%, .2)
 
 .answer
-    width: 90%
     display: none
-    padding-top: .5rem
-    padding-right: .3rem
+    margin-top: .6rem
+
+.active > .answer
+    display: block
     color: variables.$dark-grayish-blue
-    font-size: .7rem
-    line-height: 1.5rem
 
-.active
+.active img
+    transform: rotate(180deg)
+    transition: all .4s ease
+
+.active .title
     font-weight: 700
+    color: variables.$very-dark-desatureted-blue
 
-@media (max-width: 960px)
-    .box
-        display: none
+.accordion
+    display: flex
+    flex-direction: column
+    margin-top: 2.5rem
 
-@media (min-width: 960px)
-    .container
-        max-width: 960px
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
-        grid-gap: 1.6rem
-        padding-right: 6.5rem 
-        padding-bottom: 5rem
-        margin: 2rem
-        overflow: hidden
+.questions
+    display: flex
+    flex-direction: column
+    
+.accordion-content
+    width: 23.5rem
+    padding: 1rem
+    color: variables.$dark-grayish-blue
+    border-bottom: 1px solid variables.$light-grayish-blue
+    
+.faq-title
+    color: variables.$very-dark-desatureted-blue
+    font-size: 2rem
+    text-transform: uppercase
+    margin-bottom: 2rem
 
-    h1
-        margin: 0
-        text-align: left
-        margin-bottom: 1.5rem
+.question
+    display: flex
+    justify-content: space-between
+    font-size: .9rem
+    cursor: pointer
+    transition: .4s
 
-    .images
-        position: relative
-        width: 150%
-        bottom: -65%
-        left: -48%
+    &:hover
+        color: variables.$soft-red
 
-    .box
-        width: 19%
-        position: absolute
-        left: -9%
-        bottom: 11.7rem
-        z-index: 1
+.question img
+    align-self: center
 
-    .principal-img
-        z-index: 0
+.image-container
+    position: relative
 
-    .bg-pattern
-        position: absolute
-        bottom: 12rem
-        left: -33%
-        width: 120%
+.image-content
+    position: relative
+    top: 10%
+    background-image: url('../images/illustration-woman-online-desktop.svg')
+    background-repeat: no-repeat
+    background-position: 120% center
+    height: 100%
+
+.box
+    position: relative
+    bottom: 51%
+    right: 6rem
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+        
+
+
+    
+
+    
+        
+
+        
+
+
+
         
 
 
